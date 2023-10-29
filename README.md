@@ -84,7 +84,7 @@ All duplicate rows were dropped.
 Performed EDA and tried answering the following questions:
 
 ```
- Q1)
+ Q1) Remove outlier
  Q2)  Which hotel has more no of bookings and What is the  percentage of bookings in each hotel ?
  Q3) Which meal type is the  most preffered meal of customers ?
  Q4) Trough which channel most booking came?
@@ -98,23 +98,16 @@ Performed EDA and tried answering the following questions:
  Q12)What type of guest most come in the hotel?
  Q13)which agent done most number of bookings?
  Q14)Which type of room preffered by most number of guest?
- Q15)How long the guest stay in the hotel?
- Q16)What is the rate of percentage stay in weekend nights?
- Q17)In which type of hotel full stay is maximum and what is the rate of that?
- Q18)Which channel is mostly used for the booking of hotels? 
- Q6) Which room type is in most demand and which room type generates the  highest average daily rate?
- Q8) How long do people stay at the hotels?
- Q9) What is preferred stay length in each hotel based on weekday nights and weekend nights ?
- Q10) Which Booking is preffered with the deposite type?
- Q11) Cancellation rates in both the hotels also arival year and  lead time?
- Q12) What is the Average daily rate month wise also which are the most busy months??
- Q13) What is the Average daily rate with respect to per person?
- Q14) Is thier any Special request given by the customer to hotels?
- Q15) 
- Q16) Chances that its customer will return for another stay?
- Q17) Which types of customers mostly make bookings?
- Q18) How many customers are most likely to require a parking space?
-```
+ Q15)How long the guest stay in the hotel and number of stay in weekend and weekdays?
+ Q16)Which hotel got most number of full stay?
+ Q17)Which type of booking most preffered by the guest?
+ Q18)Which type of hotel got most cancellations?
+ Q19)Average waiting period of booking?
+ Q20)What is the average daily rate month wise?
+ Q21)What is the average daily price per person?
+ Q22)What is the number of special requests?
+ 23)Using a heatmap to find out the correlation.
+ 24) Using pair plot to find out the corelation.
 
 Mainly performed using Matplotlib and Seaborn library and the following graph and plots had been used:
    - Bar Plot.
@@ -123,24 +116,38 @@ Mainly performed using Matplotlib and Seaborn library and the following graph an
    - Line Plot.
    - Heatmap.
    - Box Plot
+   -Pair plot
              
 ## Analysis:
 
-Performed analysis and made following conclusions:
+Performed analysis and made the following conclusions:
 ```
- 1.) 61% bookings are for City hotel and 39% bookings are for Resort hotel, therefore City Hotel is busier than Resort hotel. 
- 2.) July- August are the most busier and profitable months for both of hotels.  
- 3.) Most popular meal type is BB(Bed and Breakfast).
- 4.) Most of the guests came from european countries, with highest number of guests from Portugal.
- 5.) Agent no. 9 has made most no. of bookings.
- 6.) Most demanded room type is A, but better average daily rate generating rooms H, G and C. Hotels should increase the no. of room types A and H to maximise revenue.
- 7.) Most common stay length is less than 4 days and generally people prefer City hotel for short stay, but for long stays, Resort Hotel is preferred.
- 8.) Guests use different channels for making bookings out of which most preferred way is TA/TO. 
- 9.) Overall average daily rate of City hotel is slightly higher than Resort hotel and no. of bookings of City hotel is also higher than Resort hotel. Hence, City hotel is makes more revenue.
- 10.) Cancelation rate is higher in city hotel. With lead time more than 100 there is more possibility of cancellation.
- 11.) Both hotels have very small percentage that customer will repeat.
- 12.) Arrivals in hotels increases at weekends and also the average daily rate tends to go up as month ends. 
- 13.) Moslty bookings are done by couples(bookings have two adults.)
+ 1.)From the scatter plot it is clear that when Full stay increases the average daily rate decreases. So the customer gets a better discount. 
+ 2.) 61% of bookings are for the City Hotel and 39% of bookings are for the Resort hotel, therefore City Hotel is busier than the Resort hotel.
+ 3.)BB-Bed and breakfast HB-Half bord(Breakfast and dinner included FB-Full board(in which breakfast,lunch and dinner are included) 78% people like BB type meal
+ 4.)79.13% of people booked through TA/TO.
+ 5.)Only 4% of people are repeated guests, rest are new guests.
+ 6.) Booking of city hotels is higher than the resort hotel in 2016 and the bookings were also maximum.
+ 7.)We can see less number of arrivals at the last  of the month.
+ 8.)Most booking was done in the month of May, June, July, and August.
+ 9.)Most guests are from Portugal and other European countries.
+ 10.)There are 4 types of customers. And maximum are transient types.
+ 11.)Only 8% of people require parking spaces.
+ 12.)Most guests are coming as a pair of two adults.
+ 13.)Agent no.9 has made the maximum booking.
+ 14.) Rooms A and D are most preferred by the guest. but better average daily room are H,G,F,C.
+ 15.) a) The most common stay in the hotel is less than 4 days and for longer days people like to stay in Resort hotels.
+      b) City hotels have more number of stays in both weekdays and weekends.
+  16.)Full stay is quite the same for both city hotels and resorts.
+  17)Booking preferred with no deposit in a resort hotel is much higher than a city hotel.
+  18) a) The cancellation rate in city hotels is much higher than in resort hotels.
+      b)And cancellation has been done in the highest number in 2017
+  19) The average waiting period in city hotel is much higher rather than resort.
+  20) The average daily rate in city hotels much higher rather than resort.And it got its peak during may,june,july,august,september.
+  21)It is clearly visible price per person in resort hotel much higher.And it gots its peak during may,june,july,august,september.
+  22) The number of special request is much higher in city hotel rather than resort.
+  23)Full_stay and lead_time have slide correlation.This mean that who stay longer have got less time to plan. 2.Average_daily_rate is        also slightly correlated with Total_members.Which means more number of people means more daily rate.
+  24)we find out the pattern and correlation.
 ```
 ## Conclusion
 
